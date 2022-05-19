@@ -1,2 +1,38 @@
-<h1 class="bg-primary">Hi</h1>
+<h1 class="bg-primary">Hi {{title}}</h1>
+<app-tasks></app-tasks>
+
+<h3>List of Completed tasks from todo module</h3>
+<app-completed-tasks></app-completed-tasks>
+
+<button (click)="printText()"></button>
+
+<!--EXAMPLE OF STRUCTURAL DIRECTIVE-->
+<!--Structural Directives are used to change/alter view on screen
+They Always start with *
+eg: *ngFor, *ngIf, *ngSwitch
+-->
+<div *ngIf="showMessage">Shows the message only if showMessage is true</div>
+
+<!--ngIf and else strctural directive example:-->
+<div *ngIf="showHi; else showHello">Hi if showHi variable is true</div>
+<!--need ng-template to else statements, also need #template reference variable (showHello in our case)-->
+<ng-template #showHello>Hello if showHi variable is false</ng-template>
+
+<div>
+<!--IF/THEN/ELSE statements using structural directive-->
+<div *ngIf="ifStatement then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>THEN BLOCK</ng-template>
+<ng-template #elseBlock>Else block</ng-template>
+</div>
+
+
+<!--ngFor Structural directive-->
+<div *ngFor="let a of arr">
+    <p>
+        TItle is: {{a.title}}, Speaker is: {{a.speaker}} and the topic is about {{a.description}}
+    </p>
+</div>
+
+<!--Example of Attribute Directives-->
+<div [ngStyle]='{color:"red"}'>Red is Applied from Attribute Directive ngStyle</div>
 <router-outlet></router-outlet>
