@@ -7,12 +7,19 @@ import { LoginComponent } from './login/login.component';
 import { HighlightPipe } from './highlight.pipe';
 import { TodoModule } from './todo/todo.module';
 import { HoverEffectPipe } from './hover-effect.pipe';
+import { TasksComponent } from './tasks/tasks.component';
+
 @NgModule({
+  //Here, TasksComponent is directly present in the app folder,
+  //so we can directly call tasks.component.html and .ts from declarations
+  //however, if we need completed-tasks present in the todo module, we import TodoModule first and place it in imports array meta/property below
+  //And we just call the selector of completed-tasks in the app.component.html as we did earlier to tasks selector
   declarations: [
     AppComponent,
     LoginComponent,
     HighlightPipe,
-    HoverEffectPipe
+    HoverEffectPipe,
+    TasksComponent
   ],
   imports: [
     BrowserModule,
