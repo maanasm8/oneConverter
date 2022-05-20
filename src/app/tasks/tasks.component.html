@@ -1,1 +1,23 @@
 <p>List of Todo Tasks</p>
+<table class="table">
+    <tr>
+        <th>Task Title</th>
+        <th>Task description</th>
+        <th>Task Due Date</th>
+        <th>Index</th>
+        <th>isFirstElement?</th>
+        <th>isLastElement?</th>
+        <th>isEvenElement?</th>
+        <th>isOddElement?</th>
+    </tr>
+    <tr *ngFor="let t of tasks; index as i; first as f; last as l; even as ev; odd as od">
+        <td>{{t.title}}</td>
+        <td>{{t.description}}</td>
+        <td>{{t.dueDate}}</td>
+        <td>{{i}}</td>
+        <td>{{f}}</td>
+        <td>{{l}}</td>
+        <td>{{ev}}</td>
+        <td>{{od}}</td>
+    </tr>
+</table>
