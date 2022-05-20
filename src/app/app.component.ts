@@ -18,6 +18,8 @@ export class AppComponent {
   //@Input and @Output are parameter/property decorators
   // @Input() data: string;
   // @Output() params: string;
+  classVariable = 'two';
+  classVar1 = 'one';
 
   printText(){
     console.log("Hi button");

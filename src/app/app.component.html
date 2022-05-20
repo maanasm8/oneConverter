@@ -33,6 +33,13 @@ eg: *ngFor, *ngIf, *ngSwitch
     </p>
 </div>
 
+
 <!--Example of Attribute Directives-->
 <div [ngStyle]='{color:"red"}'>Red is Applied from Attribute Directive ngStyle</div>
 <router-outlet></router-outlet>
+
+<div [ngClass]="'one'">ngClass attribute directive with class name one</div>
+
+<div [ngClass]="classVariable">ngClass attribute directive with class name of variable, being set in .component.ts</div>
+
+<div [ngClass]="[classVar1, classVariable]">ngClass with 2 different class names, one and classVariable(two) being passed as an array ['','']</div>
