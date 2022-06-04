@@ -43,3 +43,12 @@ eg: *ngFor, *ngIf, *ngSwitch
 <div [ngClass]="classVariable">ngClass attribute directive with class name of variable, being set in .component.ts</div>
 
 <div [ngClass]="[classVar1, classVariable]">ngClass with 2 different class names, one and classVariable(two) being passed as an array ['','']</div>
+
+<section>
+    <h4>Two-way data binding example</h4>
+
+    <div>
+        <input [(ngModel)] = "sweetNameVar" />
+        <p >Your Favorite Sweet is {{sweetNameVar}}</p>
+    </div>
+</section>

@@ -8,6 +8,7 @@ import { HighlightPipe } from './highlight.pipe';
 import { TodoModule } from './todo/todo.module';
 import { HoverEffectPipe } from './hover-effect.pipe';
 import { TasksComponent } from './tasks/tasks.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   //Here, TasksComponent is directly present in the app folder,
@@ -24,7 +25,8 @@ import { TasksComponent } from './tasks/tasks.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule
+    TodoModule,
+    FormsModule
 
   ],
   providers: [],
