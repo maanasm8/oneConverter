@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 //@Component and @NgModule are class decorators, carry meta data
 //This @Component carries selector, templateURL, styleURL meta data, style and template are optional.
 @Component({ //Component directive
@@ -20,6 +21,16 @@ export class AppComponent {
   // @Output() params: string;
   classVariable = 'two';
   classVar1 = 'one';
+
+  sweetNameVar = "";
+  
+  boolVar = false ;
+
+  readSweetInput(){
+    
+    this.boolVar = true;
+    console.log(this.boolVar);
+  }
 
   printText(){
     console.log("Hi button");
